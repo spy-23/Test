@@ -8,6 +8,7 @@ public class Teststep {
 
     @Given("user navigates to the website javatpoint.com")
     public void user_navigates_to_the_website_javatpoint_com() {
+        System.out.println("Hi");
         // Write code here that turns the phrase above into concrete actions
 
     }
