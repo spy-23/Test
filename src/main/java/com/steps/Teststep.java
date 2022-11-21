@@ -2,12 +2,19 @@ package com.steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Teststep {
 
 
     @Given("user navigates to the website javatpoint.com")
-    public void user_navigates_to_the_website_javatpoint_com() {
+    public void user_navigates_to_the_website_javatpoint_com() throws InterruptedException {
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://google.com");
+        Thread.sleep(10000);
         System.out.println("Hi");
         // Write code here that turns the phrase above into concrete actions
 
